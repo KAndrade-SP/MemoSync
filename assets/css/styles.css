@@ -454,7 +454,7 @@ img {
 .chart-p-right {
   position: relative;
   float: right;
-  padding-left: 8.75rem;
+  text-align: end;
   width: 46%;
   @media (max-width: 620px) {
     width: 100%;
@@ -592,46 +592,6 @@ img {
   }
   .footer {
     margin-top: 6rem;
-  }
-  .chart-p-right {
-    padding-left: 1.75rem;
-  }
-}
-
-/* Right Text */
-@media screen and (min-width: 320px) and (max-width: 370px) {
-  .chart-p-right {
-    padding-left: 2rem;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 360px) {
-  .chart-p-right {
-    padding-left: 3rem;
-  }
-}
-
-@media screen and (min-width: 360px) and (max-width: 420px) {
-  .chart-p-right {
-    padding-left: 4rem;
-  }
-}
-
-@media screen and (min-width: 420px) and (max-width: 450px) {
-  .chart-p-right {
-    padding-left: 5rem;
-  }
-}
-
-@media screen and (min-width: 450px) and (max-width: 500px) {
-  .chart-p-right {
-    padding-left: 6rem;
-  }
-}
-
-@media screen and (min-width: 500px) and (max-width: 560px) {
-  .chart-p-right {
-    padding-left: 7rem;
   }
 }
 
