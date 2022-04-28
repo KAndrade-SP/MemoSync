@@ -136,7 +136,7 @@ img {
 }
 
 .nav__img {
-  width: 80px;
+  width: 60px;
 }
 
 .nav__mask {
@@ -661,7 +661,7 @@ img {
     margin-bottom: 2rem;
   }
   .nav__img {
-    width: 90px;
+    width: 70px;
   }
   .nav__link {
     font-size: var(--normal-font-size);
