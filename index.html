@@ -12,14 +12,13 @@
     <body>
         <nav class="nav" id="nav">
             <div class="nav__menu container" id="nav-menu">
-
                 <div class="nav__close" id="nav-close">
                     <i class="fa-solid fa-xmark"></i>
                 </div>
 
                 <div class="nav__data">
                     <div class="nav__mask">
-                        <img src="" alt="" class="nav__img">
+                        <img src="./assets/img/logo/MemoSyncLogoWhite.png" alt="" class="nav__img">
                     </div>
                 </div>
 
@@ -51,13 +50,6 @@
                             Metacritic
                         </a>
                     </li>
-
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">
-                            <ion-icon name="chatbubbles"></ion-icon>
-                            Contato
-                        </a>
-                    </li>
                 </ul>
             </div>
         </nav>
@@ -75,9 +67,23 @@
                 </nav>              
             </header>
 
-            <section class="section section__height container" id="home">
-                <h1>HOME</h1>
-
+            <section class="section container" id="home">
+                <div class="section__home-content">
+                    <div class="home-logo">
+                        <div class="content-img-home">
+                            <div class="home-logo-p">
+                                <img src="./assets/img/logo/MemoSyncLogoWhite.png" alt="MemoSyncLogo" class="img-home">
+                            
+                                <div class="p-home">
+                                    <h2>MemoSync</h2>
+                                    <p>Fique por dentro dos charts atuais da indústria musical.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
             </section>
 
             <section class="section container" id="genre">
@@ -135,38 +141,49 @@
                 <div class="section__top-chart-content">
                     <div class="images">
                         <div class="content-img-left">
-                            <img src="./assets/img/section-chart/harry1.jpg" alt="As It Was" class="chart-img-left">
-                            <div class="chart-p-left">
-                                <h2>As It Was</h2>
-                                <p>Harry Styles</p>
+                            <div class="images-p-left">
+                                <img src="./assets/img/section-chart/harry1.jpg" alt="As It Was" class="chart-img-left">
+                                <div class="chart-p-left">
+                                    <h2>As It Was</h2>
+                                    <p>Harry Styles</p>
+                                </div>
                             </div>
+                            
                         </div>
                         <div class="content-img-right">
-                            <img src="./assets/img/section-chart/jackHarlow2.jpg" alt="First Class" class="chart-img-right">
-                            <div class="chart-p-right">
-                                <h2>First Class</h2>
-                                <p>Jack Harlow</p>
+                            <div class="images-p-right">
+                                <div class="chart-p-right">
+                                    <h2>First Class</h2>
+                                    <p>Jack Harlow</p>
+                                </div>
+                                <img src="./assets/img/section-chart/jackHarlow2.jpg" alt="First Class" class="chart-img-right"> 
                             </div>
                         </div>
                         <div class="content-img-left">
-                            <img src="./assets/img/section-chart/heatWaves3.jpg" alt="Heat Waves" class="chart-img-left">
-                            <div class="chart-p-left">
-                                <h2>Heat Waves</h2>
-                                <p>Glass Animals</p>
+                            <div class="images-p-left">
+                                <img src="./assets/img/section-chart/heatWaves3.jpg" alt="Heat Waves" class="chart-img-left">
+                                <div class="chart-p-left">
+                                    <h2>Heat Waves</h2>
+                                    <p>Glass Animals</p>
+                                </div>
                             </div>
                         </div>
                         <div class="content-img-right">
-                            <img src="./assets/img/section-chart/lattoBigEnergy4.jpg" alt="Big Energy" class="chart-img-right">
-                            <div class="chart-p-right">
-                                <h2>Big Energy</h2>
-                                <p>Latto</p>
-                            </div>
+                            <div class="images-p-right">
+                                <div class="chart-p-right">
+                                    <h2>Big Energy</h2>
+                                    <p>Latto</p>
+                                </div>
+                                <img src="./assets/img/section-chart/lattoBigEnergy4.jpg" alt="Big Energy" class="chart-img-right">
+                            </div> 
                         </div>
                         <div class="content-img-left">
-                            <img src="./assets/img/section-chart/imagineEnemy5.jpg" alt="Enemy" class="chart-img-left">
-                            <div class="chart-p-left">
-                                <h2>Enemy</h2>
-                                <p>Imagine Dragons X JID</p>
+                            <div class="images-p-left">
+                                <img src="./assets/img/section-chart/imagineEnemy5.jpg" alt="Enemy" class="chart-img-left">
+                                <div class="chart-p-left">
+                                    <h2>Enemy</h2>
+                                    <p>Imagine Dragons X JID</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -176,15 +193,92 @@
             <section class="section container" id="metacritic">
                 <h1>Metacritic</h1>
                 <div class="section__metacritic-content">
-
-                </div>
-                
+                    <div class="table-wrapper">
+                        <table class="fl-table">
+                            <thead>
+                                <tr>
+                                    <th>Posição</th>
+                                    <th>Música</th>
+                                    <th>Artista</th>
+                                    <th>Metascore</th>
+                                    <th>Referência</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>As It Was</td>
+                                    <td>Harry Styles</td>
+                                    <td>89</td>
+                                    <td>
+                                        <a target="blank" href="https://www.rollingstone.com/music/music-lists/every-harry-styles-song-ranked-1323913/treat-people-with-kindness-1334303/" class="nav__link-table">
+                                            Rolling Stones
+                                            <ion-icon name="arrow-redo"></ion-icon>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Jack Harlow</td>
+                                    <td>First Class</td>
+                                    <td>67</td>
+                                    <td>
+                                        <a target="blank" href="https://variety.com/v/music/" class="nav__link-table">
+                                            Variety
+                                            <ion-icon name="arrow-redo"></ion-icon>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Heat Waves</td>
+                                    <td>Glass Animals</td>
+                                    <td>90</td>
+                                    <td>
+                                        <a target="blank" href="https://www.nme.com/news/music/glass-animals-reach-number-1-on-billboard-charts-with-heat-waves-3177655" class="nav__link-table">
+                                            NME
+                                            <ion-icon name="arrow-redo"></ion-icon>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Big Energy</td>
+                                    <td>Latto</td>
+                                    <td>82</td>
+                                    <td>
+                                        <a target="blank" href="https://www.nme.com/news/music/watch-latto-perform-big-energy-and-sunshine-on-jimmy-fallon-3202714" class="nav__link-table">
+                                            NME
+                                            <ion-icon name="arrow-redo"></ion-icon>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Enemy</td>
+                                    <td>Imagine Dragons X JID</td>
+                                    <td>97</td>
+                                    <td>
+                                        <a target="blank" href="https://www.rollingstone.com/music/music-news/imagine-dragons-bring-league-of-legends-inspired-enemy-to-fallon-1290671/" class="nav__link-table">
+                                            Rolling Stones 
+                                            <ion-icon name="arrow-redo"></ion-icon>
+                                        </a>
+                                    </td>
+                                </tr>
+                            <tbody>
+                        </table>
+                    </div>
+                </div>       
             </section>
 
-            <section class="section container" id="contact">
-                <h1>Contato</h1>
-                
-            </section>
+            <footer class="footer" id="footer">
+                <nav class="footer__content container">
+                    <a href="#" class="header__logo">
+                        MemoSync
+                    </a>
+                    <p>by Kaique Andrade Silva Viana.</p>
+                </nav>       
+            </footer>
         </main>
 
         <script src="assets/js/main.js"></script>
