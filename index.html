@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <meta name="description" content="Website dedicado à publicação de charts musicais.">
     <meta name="author" content="Kaique Andrade Silva Viana">
     <link rel="stylesheet" href="assets/css/styles.css">  
@@ -39,8 +39,15 @@
 
                     <li class="nav__item">
                         <a href="#top-chart" class="nav__link">
-                            <ion-icon name="bar-chart"></ion-icon>
+                            <ion-icon name="trophy"></ion-icon>
                             Top semanal
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#top_artists" class="nav__link">
+                            <ion-icon name="bar-chart"></ion-icon>
+                            Artistas em alta
                         </a>
                     </li>
 
@@ -48,6 +55,21 @@
                         <a href="#metacritic" class="nav__link">
                             <ion-icon name="star-half"></ion-icon>
                             Metacritic
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#dynamic_chart" class="nav__link">
+                            <ion-icon name="headset"></ion-icon>
+                            Qual o próximo top semanal?
+                        </a>
+                    </li>
+                    
+
+                    <li class="nav__item">
+                        <a href="#favs" class="nav__link">
+                            <ion-icon name="heart"></ion-icon>
+                            Artistas favoritos
                         </a>
                     </li>
                 </ul>
@@ -73,16 +95,13 @@
                         <div class="content-img-home">
                             <div class="home-logo-p">
                                 <img src="./assets/img/logo/MemoSyncLogoWhite.png" alt="MemoSyncLogo" class="img-home">
-                            
                                 <div class="p-home">
                                     <h2>MemoSync</h2>
                                     <p>Fique por dentro dos charts atuais da indústria musical.</p>
                                 </div>
                             </div>
                         </div>
-                        
-                    </div>
-                    
+                    </div>   
                 </div>
             </section>
 
@@ -148,7 +167,6 @@
                                     <p>Harry Styles</p>
                                 </div>
                             </div>
-                            
                         </div>
                         <div class="content-img-right">
                             <div class="images-p-right">
@@ -185,6 +203,36 @@
                                     <p>Imagine Dragons X JID</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section container" id="top_artists">
+                <h1>Artistas em alta</h1>
+                <div class="section__top_artists-content">
+                    <div class="super-container">
+                        <div class="super-container-carousel">
+                          <div class="carousel-container">
+
+                            <div class="myCarousel fade">
+                              <div class="numbertext">1 / 3</div>
+                              <img class="" onclick="toggleFavourite(event)" src="./assets/img/carousel/harryCarousel.jpg"> 
+                            </div>
+                      
+                            <div class="myCarousel fade">
+                              <div class="numbertext">2 / 3</div>
+                              <img class="" onclick="toggleFavourite(event)" src="./assets/img/carousel/imagineDragonsCarousel.jpg">
+                            </div>
+                      
+                            <div class="myCarousel fade">
+                              <div class="numbertext">3 / 3</div>
+                              <img class="" onclick="toggleFavourite(event)" src="./assets/img/carousel/charliePuthCarousel.jpg">
+                            </div>
+                      
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                          </div>
                         </div>
                     </div>
                 </div>
@@ -269,6 +317,39 @@
                         </table>
                     </div>
                 </div>       
+            </section>
+
+            <section class="section container" id="dynamic_chart">
+                <h1>Qual o próximo top semanal?</h1>
+                <div class="section__dynamic_chart-content">
+                    <div class="table-wrapper">
+                        <table class="fl-table">
+                            <thead>
+                                <tr>
+                                    <th>Posição</th>
+                                    <th>Música</th>
+                                    <th>Artista</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="text" placeholder="1" ></td>
+                                    <td><input type="text" placeholder="Nome da música" ></td>
+                                    <td><input type="text" placeholder="Nome do artista" ></td>
+                                </tr>
+                            <tbody>
+                        </table>
+                    </div>
+                </div>       
+            </section>
+
+            <section class="section container" id="favs">
+                <h1>Artistas favoritos</h1>
+                <div class="section__favs__content">
+                    <div class="fav_images">
+                        
+                    </div>
+                </div>
             </section>
 
             <footer class="footer" id="footer">

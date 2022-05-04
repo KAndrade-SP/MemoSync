@@ -57,3 +57,55 @@ function scrollActive(){
 }
 window.addEventListener('scroll', scrollActive)
 
+/*=============== CAROUSEL FUNCTION ===============*/
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("myCarousel");
+  
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex - 1].style.display = "block";
+}
+
+// Fav image function
+const toggleFavourite = (event) => {
+  console.log("Function activated")
+  if (event.target){
+    const clickTarget = event.target;
+    clickTarget.classList.toggle('fav')
+  }
+  getFavs();
+}
+
+//Example use, get all favs and attach the text as a new element
+const getFavs = () => {
+  const fav_images = document.querySelectorAll('.fav');
+  const favContainer = document.querySelector('.fav_images')
+  favContainer.innerHTML = "";
+  for(let fav of fav_images){
+    let newFav = document.createElement('img');
+    newFav.setAttribute('src', fav.getAttribute('src'))
+    newFav.setAttribute('class', 'fav-img')
+    favContainer.appendChild(newFav)
+  }
+}
