@@ -584,6 +584,11 @@ img {
   flex-direction: column;
 }
 
+.fav_images ion-icon {
+  font-size: 4rem;
+  padding-bottom: 1rem;
+}
+
 .fav-img {
   width: 62%;
   padding: 1rem;
@@ -609,6 +614,49 @@ img {
 }
 
 /*=============== TABLE ===============*/
+.dynamic_chart-icons {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  column-gap: 1rem;
+}
+
+.chart-content-add {
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.50rem;
+}
+
+.chart-content-remove {
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.50rem;
+}
+
+.chart-content-add:hover {
+  cursor: pointer;
+  color: var(--title-color);
+}
+
+.chart-content-remove:hover {
+  cursor: pointer;
+  color: var(--title-color);
+}
+
+.dynamic_chart-icons ion-icon {
+  font-size: 1.50rem;
+}
+
+.chart_content-icon {
+  display: flex;
+  align-self: center;
+}
+
+.chart_content-p {
+  display: flex;
+  align-self: center;
+}
+
 .table-wrapper{
   padding: 1rem;
 }
@@ -638,6 +686,7 @@ img {
 
 .fl-table td input {
   background: transparent;
+  font-family: var(--body-font);
   font-size: var(--small-font-size);
   color: var(--title-color);
   border: none;
@@ -706,6 +755,10 @@ img {
       width: 140px;
       font-size: var(--small-font-size);
       text-overflow: ellipsis;
+  }
+  .fl-table td input {
+    width: 100%;
+    align-self: center;
   }
   .fl-table thead th {
       text-align: left;

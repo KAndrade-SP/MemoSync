@@ -230,8 +230,8 @@
                               <img class="" onclick="toggleFavourite(event)" src="./assets/img/carousel/charliePuthCarousel.jpg">
                             </div>
                       
-                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            <a class="prev" onclick="plusSlides('<')">&#10094;</a>
+                            <a class="next" onclick="plusSlides('>')">&#10095;</a>
                           </div>
                         </div>
                     </div>
@@ -322,8 +322,26 @@
             <section class="section container" id="dynamic_chart">
                 <h1>Qual o próximo top semanal?</h1>
                 <div class="section__dynamic_chart-content">
+                    <div class="dynamic_chart-icons">
+                        <div class="chart-content-add" onclick="addRow('fl-table')">
+                            <div class="chart_content-icon">
+                                <ion-icon name="add-circle"></ion-icon>
+                            </div>
+                            <div class="chart_content-p">
+                                <p>Adicionar linhas</p>
+                            </div>
+                        </div>
+                        <div class="chart-content-remove" onclick="deleteRow('fl-table')">
+                            <div class="chart_content-icon">
+                                <ion-icon name="remove-circle"></ion-icon>
+                            </div>
+                            <div class="chart_content-p">
+                                <p>Remover linhas</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="table-wrapper">
-                        <table class="fl-table">
+                        <table class="fl-table" id="fl-table">
                             <thead>
                                 <tr>
                                     <th>Posição</th>
@@ -331,11 +349,11 @@
                                     <th>Artista</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="fl-table_body">
                                 <tr>
-                                    <td><input type="text" placeholder="1" ></td>
-                                    <td><input type="text" placeholder="Nome da música" ></td>
-                                    <td><input type="text" placeholder="Nome do artista" ></td>
+                                    <td><input type="text" placeholder="1"></td>
+                                    <td><input type="text" placeholder="Nome da música"></td>
+                                    <td><input type="text" placeholder="Nome do artista"></td>
                                 </tr>
                             <tbody>
                         </table>
@@ -347,7 +365,8 @@
                 <h1>Artistas favoritos</h1>
                 <div class="section__favs__content">
                     <div class="fav_images">
-                        
+                        <ion-icon name="heart-dislike"></ion-icon>
+                        <p>Sem favoritos ainda :( Clique em uma imagem do carrossel para adicionar!</p>
                     </div>
                 </div>
             </section>

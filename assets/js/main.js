@@ -58,54 +58,83 @@ function scrollActive(){
 window.addEventListener('scroll', scrollActive)
 
 /*=============== CAROUSEL FUNCTION ===============*/
-let slideIndex = 1;
-showSlides(slideIndex);
+let slides = document.getElementsByClassName("myCarousel")
+let slideIndex = 0
+let auxContainer = document.querySelector('.fav_images').innerHTML
+
+// Call first slide
+showSlides()
+
+function setNewSlide() {
+  for (let i = 0; i < slides.length; i++) slides[i].style.display = "none"
+
+  if (slideIndex > slides.length) slideIndex = 1
+  if (slideIndex < 1) slideIndex = slides.length
+
+  slides[slideIndex - 1].style.display = "block"
+}
 
 // Next/previous controls
-function plusSlides(n) {
-  showSlides((slideIndex += n));
+function plusSlides(action) {
+  action == ">" ? slideIndex++ : slideIndex--
+  setNewSlide()
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides((slideIndex = n));
+function showSlides() {
+  slideIndex++
+  setNewSlide()
 }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("myCarousel");
-  
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slides[slideIndex - 1].style.display = "block";
-}
+window.addEventListener("load", () => setInterval(showSlides, 5000))
 
 // Fav image function
-const toggleFavourite = (event) => {
-  console.log("Function activated")
+const toggleFavourite = (event) => { 
   if (event.target){
     const clickTarget = event.target;
     clickTarget.classList.toggle('fav')
   }
-  getFavs();
+  getFavs()
 }
 
 //Example use, get all favs and attach the text as a new element
 const getFavs = () => {
-  const fav_images = document.querySelectorAll('.fav');
+  const fav_images = document.querySelectorAll('.fav')
   const favContainer = document.querySelector('.fav_images')
-  favContainer.innerHTML = "";
+
+  favContainer.innerHTML = ""
+
+  if (fav_images.length < 1) {
+    favContainer.innerHTML = auxContainer
+  }
+
   for(let fav of fav_images){
-    let newFav = document.createElement('img');
+    let newFav = document.createElement('img')
+
     newFav.setAttribute('src', fav.getAttribute('src'))
     newFav.setAttribute('class', 'fav-img')
     favContainer.appendChild(newFav)
+  }
+}
+
+/*=============== TABLE FUNCTION ===============*/
+function addRow(flTableId) {
+  let table = document.getElementById(flTableId)
+  let row = table.getElementsByTagName('tr')
+  let body = document.querySelector("#fl-table_body")
+
+  row = row[row.length-1].outerHTML
+  body.innerHTML = body.innerHTML + row
+}
+
+function deleteRow(flTableId) { 
+  let table = document.getElementById(flTableId)
+  let row = table.getElementsByTagName('tr')
+
+  if (row.length == '2') {
+    return null
+  }
+
+  if(row.length != '1'){
+    row[row.length - 1].outerHTML=''
   }
 }
