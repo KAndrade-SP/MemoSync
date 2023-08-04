@@ -454,9 +454,6 @@ img {
   position: relative;
   float: left;
   width: 46%;
-  @media (max-width: 620px) {
-    width: 100%;
-  }
 }
 
 .content-img-right {
@@ -477,9 +474,6 @@ img {
   float: right;
   text-align: end;
   width: 46%;
-  @media (max-width: 620px) {
-    width: 100%;
-  }
 }
 
 /*=============== CAROUSEL ===============*/
@@ -801,12 +795,59 @@ img {
   }
   .section__home-content {
     margin-bottom: -5.55rem;
+
+    .home-logo-p {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      flex-direction: column;
+      column-gap: 1rem;
+    }
+
+    .p-home {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      width: 46%;
+      margin-right: -1rem;
+      @media (max-width: 620px) {
+        width: 100%;
+      }
+    }
   }
   .section__genre-card {
     margin-bottom: -5.55rem;
   }
   .section__top-chart-content {
     margin-bottom: -5.55rem;
+
+    .content-img-left {
+      display: table-cell;
+      vertical-align: middle;
+      padding: 1rem;
+      max-width: 600px;
+    }
+    
+    .chart-p-left {
+      position: relative;
+      float: left;
+    }
+    
+    .content-img-right {
+      display: table-cell;
+      vertical-align: middle;
+      padding: 1rem;
+      max-width: 600px;
+    }
+    
+    .chart-p-right {
+      position: relative;
+      float: right;
+      text-align: end;
+    }
   }
   .section__top_artists-content {
     margin-bottom: -5.55rem;
@@ -832,13 +873,61 @@ img {
 @media screen and (min-width: 320px) and (max-width: 620px) {
   .section__home-content {
     margin-bottom: -5.55rem;
+
+    .home-logo-p {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      flex-direction: column;
+      column-gap: 1rem;
+    }
+
+    .p-home {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      width: 46%;
+      @media (max-width: 620px) {
+        width: 100%;
+      }
+    }
   }
+
   .section__genre-card {
     margin-bottom: -5.55rem;
   }
   .section__top-chart-content {
     margin-bottom: -5.55rem;
+    
+    .content-img-left {
+      display: table-cell;
+      vertical-align: middle;
+      padding: 1rem;
+      max-width: 600px;
+    }
+    
+    .chart-p-left {
+      position: relative;
+      float: left;
+    }
+    
+    .content-img-right {
+      display: table-cell;
+      vertical-align: middle;
+      padding: 1rem;
+      max-width: 600px;
+    }
+    
+    .chart-p-right {
+      position: relative;
+      float: right;
+      text-align: end;
+    }
   }
+
   .section__top_artists-content {
     margin-bottom: -5.55rem;
   }
